@@ -32,7 +32,8 @@ const questions = () => inquirer.prompt([
    {
     type: "list",
     message: "What type of license does your project have?",
-    name: "license","BSD 3", "GPL 3.0","MIT","None"]
+    name: "license",
+    choices: ["BSD 3", "GPL 3.0","MIT","None"]
    },
    {
     type: "input",
