@@ -1,19 +1,22 @@
-const { writeFile } = require("fs");
-const fs = require("fs/promises");
+
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
 
-const markDown= util.promisify(fs.writeFile);
 
+const writeFile= util.promisify(fs.writeFile);
 
-
-// TODO: Create an array of questions for user input
+//array of questions for user input
 const questions = () => inquirer.prompt([
    {
     type: 'input',
+    message: 'What is your name?',
+    name:'name',
+   },
+   {
+    type: 'input',
     message: 'What is your GitHub username?',
-    name:'username',
+    name:'githubname',
    },
    {
     type: 'input',
@@ -22,8 +25,8 @@ const questions = () => inquirer.prompt([
    },
    {
     type: 'input', 
-    message: 'What is the project name?',
-    name: 'projectname'
+    message: 'What is the project title?',
+    name: 'title'
    },
    {
     type: 'input',
@@ -38,7 +41,7 @@ const questions = () => inquirer.prompt([
    {
     type: 'input',
     message: 'What command should be run to install dependencies?',
-    name: 'installcommand'
+    name: 'install'
    },
    {
     type: 'input',
@@ -48,34 +51,59 @@ const questions = () => inquirer.prompt([
    {
     type: 'input',
     message: 'What does the user need to know about using this repository?',
-    name: 'instructions'
-   }
-])
+    name: 'directions'
+   },
+]);
 
-.then((data) => {
-   console.log(data);
-   data.confirm === data.username
-   ? console.log('Success!')
-   : console.log('Did not work')
+//.then((data) => {
+//   console.log(data);
+//   data.confirm === data.username
+ //  ? console.log('Success!')
+ //  : console.log('Did not work')
 
-})
-.then (({username, email, projectname, description, license, installcommand, testcommand, instructions
-}) =>{
-   console.log(username);
-   console.log(email);
-   console.log(projectname);
-   console.log(description);
-   console.log(license);
-   console.log(installcommand);
-   console.log(testcommand);
-   console.log(instructions);
-})
+//})
+//.then (({username, email, projectname, description, license, installcommand, testcommand, instructions
+//}) =>{
+//   console.log(username);
+//   console.log(email);
+//   console.log(projectname);
+//   console.log(description);
+//   console.log(license);
+//   console.log(installcommand);
+//   console.log(testcommand);
+ //  console.log(instructions);
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+function generateMarkDown(data){
+return`# ${data.title}
+${data.description}
+## Table of Contents
+*[Installation](#installation)
+*[Usage](#usage)
+*[License](#license)
+*[Contributing](#contributing)
+*[Tests](#tests)
+*[Questions](#questions)
 
-// TODO: Create a function to initialize ap
-//function init() {}
+###Installation
+${data.install}
+###Usage
+${data.directions}
+###License
+${data.license}
+###Contributing
+${data.contribute}
+##Tests
+Use the following command to run tests:
+${data.testcommand} 
+###Questions
+Contact me with additional questions at 
+[GitHub](https://github.com/${data.githubname})
+or contact 
+${data.name} at ${data.email}`
 
-// Function call to initialize app
-// init();
+}
+
+questions()
+.then((data) => writeFile('generateREADME.md',
+createMarkDown(data)))  .then(() => console.log('Successful html write'))
+  .catch((err) => console.error(err));
