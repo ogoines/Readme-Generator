@@ -82,6 +82,25 @@ const questions = () => inquirer.prompt([
  //  console.log(instructions);
 
 function generateMarkDown(data){
+
+   let badge = "";  
+     if(data.license == "MIT"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=plastic)"
+    }else if (data.license == "APACHE 2.0"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=APACHE2.0&color=blueviolet&style=plastic)"
+    }else if (data.license == "GPL 3.0"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=GPL3.0&color=blueviolet&style=plastic)"
+    }else if (data.license == "BSD 3"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=BSD3&color=blueviolet&style=plastic)"
+    }
+
+
+
+
+
+
+
+
 return`# ${data.title}
 ${data.description}
 ## Table of Contents
@@ -112,6 +131,6 @@ ${data.name} at ${data.email}`
 }
 
 questions()
-.then((data) => writeFile('generateREADME.md',
-generateMD(data))).then(() => console.log('Successful html write'))
-  .catch((err) => console.error(err));
+ .then((data) => writeFile('README.md', generateMarkDown(data)))
+ .then(() => console.log('Successful html write'))
+ .catch((err) => console.error(err));
