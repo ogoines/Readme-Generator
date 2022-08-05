@@ -63,24 +63,6 @@ const questions = () => inquirer.prompt([
    },
 ]);
 
-//.then((data) => {
-//   console.log(data);
-//   data.confirm === data.username
- //  ? console.log('Success!')
- //  : console.log('Did not work')
-
-//})
-//.then (({username, email, projectname, description, license, installcommand, testcommand, instructions
-//}) =>{
-//   console.log(username);
-//   console.log(email);
-//   console.log(projectname);
-//   console.log(description);
-//   console.log(license);
-//   console.log(installcommand);
-//   console.log(testcommand);
- //  console.log(instructions);
-
 function generateMarkDown(data){
 
    let badge = "";  
@@ -95,12 +77,6 @@ function generateMarkDown(data){
     }
 
 
-
-
-
-
-
-
 return`# ${data.title}
 ${data.description}
 ## Table of Contents
@@ -111,19 +87,28 @@ ${data.description}
 *[Tests](#tests)
 *[Questions](#questions)
 
-###Installation
+##Installation
+
 ${data.install}
-###Usage
+
+##Usage
 ${data.directions}
-###License
+
+##License
 ${data.license}
-###Contributing
+
+##Contributing
 ${data.contribute}
+
 ##Tests
+
 Use the following command to run tests:
 ${data.testcommand} 
-###Questions
+
+##Questions
+
 Contact me with additional questions at 
+
 [GitHub](https://github.com/${data.githubname})
 or contact 
 ${data.name} at ${data.email}`
