@@ -1,48 +1,45 @@
 const { writeFile } = require("fs");
 const fs = require("fs/promises");
 const inquirer = require("inquirer");
-fs.writeFile("readmeMarkup.md", "test")
-.then(()
+const fs = require('fs');
+const util = require('util');
+
+const markDown= util.promisify(fs.writeFile);
+
 
 
 // TODO: Create an array of questions for user input
-inquirer.prompt([
+const questions = () => inquirer.prompt([
    {
     type: 'input',
     message: 'What is your GitHub username?',
     name:'username',
    },
-
    {
     type: 'input',
-    message: 'What is your email address?',
+    message: 'What is your email address?', 
     name: 'email'
    },
-   
    {
     type: 'input', 
     message: 'What is the project name?',
     name: 'projectname'
    },
-   
    {
     type: 'input',
     message: 'Please write a short description of your project?',
     name: 'description'
    },
-   
    {
     type: 'input',
     message: 'What kind of License should your project have?',
     name: 'license'
    },
-   
    {
     type: 'input',
     message: 'What command should be run to install dependencies?',
     name: 'installcommand'
    },
-
    {
     type: 'input',
     message: 'What command should be used to run tests?',
