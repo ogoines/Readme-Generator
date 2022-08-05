@@ -9,49 +9,56 @@ const writeFile= util.promisify(fs.writeFile);
 //array of questions for user input
 const questions = () => inquirer.prompt([
    {
-    type: 'input',
-    message: 'What is your name?',
-    name:'name',
+    type: "input",
+    message: "What is your name?",
+    name:"name",
    },
    {
-    type: 'input',
-    message: 'What is your GitHub username?',
+    type: "input",
+    message: "What is your GitHub username?",
     name:'githubname',
    },
    {
-    type: 'input',
-    message: 'What is your email address?', 
-    name: 'email'
+    type: 
+    "input",
+    message: "What is your email address?", 
+    name: "email"
    },
    {
-    type: 'input', 
-    message: 'What is the project title?',
-    name: 'title'
+    type: "input", 
+    message: "What is the project title?",
+    name: "title"
    },
    {
-    type: 'input',
-    message: 'Please write a short description of your project?',
-    name: 'description'
+    type: "list",
+    message: "What type of license does your project have?",
+    name: "license","BSD 3", "GPL 3.0","MIT","None"]
    },
    {
-    type: 'input',
-    message: 'What kind of License should your project have?',
-    name: 'license'
+    type: "input",
+    message: "Please write a short description of your project?",
+    name: "description"
    },
    {
-    type: 'input',
-    message: 'What command should be run to install dependencies?',
-    name: 'install'
+    type: "input",
+    message: "What kind of License should your project have?",
+    name: "license"
    },
    {
-    type: 'input',
-    message: 'What command should be used to run tests?',
-    name: 'testcommand'
+    type: "input",
+    message: "What command should be run to install dependencies?",
+    name: "install"
+   },
+   {
+    type: "input",
+    message: "What command should be used to run tests?",
+    name: "testcommand"
    }, 
    {
-    type: 'input',
-    message: 'What does the user need to know about using this repository?',
-    name: 'directions'
+    type: "input",
+    message: 
+    "What does the user need to know about using this repository?",
+    name: "directions"
    },
 ]);
 
@@ -105,5 +112,5 @@ ${data.name} at ${data.email}`
 
 questions()
 .then((data) => writeFile('generateREADME.md',
-createMarkDown(data)))  .then(() => console.log('Successful html write'))
+generateMD(data))).then(() => console.log('Successful html write'))
   .catch((err) => console.error(err));
