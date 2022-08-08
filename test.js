@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
-const generateMarkdown = require("./utils/generateMarkdown.js");
+
 
 const writeFile= util.promisify(fs.writeFile);
 
@@ -39,11 +39,13 @@ const questions = () => inquirer.prompt([
    message: "Please write the guidelines for contributing to this project.",
    name: "contribute"
    },
+
    {
     type: "input",
     message: "Please write a short description of your project?",
     name: "description"
    },
+
    {type: "input",
     message: "What does the user need to know about using this repository?",
     name: "usage"
@@ -66,9 +68,66 @@ const questions = () => inquirer.prompt([
   
 ]);
 
+function generateMarkDown(data){
 
-// then console logs if input successful /creates markedown from user input questions 
+   let badge = "";  
+     if(data.license == "MIT"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blueviolet&style=plastic)"
+    }else if (data.license == "APACHE 2.0"){
+        badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    }else if (data.license == "GPL 3.0"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=GPL3.0&color=blueviolet&style=plastic)"
+    }else if (data.license == "BSD 3"){
+        badge = "![License](https://img.shields.io/static/v1?label=License&message=BSD3&color=blueviolet&style=plastic)"
+    }
+
+
+return`
+ ${badge}
+  
+
+ # Title 
+    ${data.title}
+
+## Table of Contents
+- [Project description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+## Description
+    ${data.description}
+
+## Installation
+    ${data.install}
+
+## Usage
+    ${data.usage}
+
+## License
+    ${data.license}
+
+## Contributing
+    ${data.contribute}
+
+## Tests
+    Use the following command to run tests:
+    ${data.testcommand} 
+
+## Questions
+
+    Contact me with additional questions at 
+
+    [GitHub](https://github.com/${data.githubname})
+    or contact 
+    ${data.name} at ${data.email}`
+
+}
+
 questions()
- .then((data) => writeFile('README.md', generateMarkdown(data)))
+ .then((data) => writeFile('TESTREADME.md', generateMarkDown(data)))
  .then(() => console.log('Successful html write'))
  .catch((err) => console.error(err));
