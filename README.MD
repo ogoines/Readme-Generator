@@ -1,9 +1,9 @@
 
  # Title 
-  tittttt
+  Readme Generator
 
   //license badge url
-  undefined
+  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
  ## Table of Contents
  * [Project description](#Description)
@@ -15,29 +15,29 @@
  - [Questions](#Questions)
 
  ## Description
- nnnnndeeeesccccriiipption
+ Here is a short description
 
  ## Installation
  npm install
 
  ## Usage
- nothing
+ The user needs to know that this is a test.
 
  ## License
- Apache 2.0
+ BSD 3
 
  ## Contributing
- none
+ Here are the guidelines.
 
  ## Tests
  Use the following command to run tests:
- node 
+ node test.js 
 
  ## Questions
 
  Contact me with additional questions at 
 
- [GitHub](https://github.com/Github)
+ [GitHub](https://github.com/AGithubuser)
   or contact 
- Orsha at email
+ Myname at myemail@email.com
  
