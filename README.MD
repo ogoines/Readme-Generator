@@ -1,9 +1,8 @@
 
- # Title 
-  Readme Generator
+ # cool fu project
 
-  //license badge url
-  [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+  
+  [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
  ## Table of Contents
  * [Project description](#Description)
@@ -15,29 +14,39 @@
  - [Questions](#Questions)
 
  ## Description
- Here is a short description
+ this is a short description
 
  ## Installation
- npm install
+ Use the following command to install dependencies:
+ 
+ `
+ npm install 
+ `
 
  ## Usage
- The user needs to know that this is a test.
+ not abcable
 
  ## License
- BSD 3
+ Apache 2.0
 
+ This project is licensed by the Apache 2.0.
+ 
  ## Contributing
- Here are the guidelines.
+ there are currently no guidlines
 
  ## Tests
+ 
  Use the following command to run tests:
- node test.js 
-
+ 
+ `
+ n/a 
+ `
+ 
  ## Questions
 
  Contact me with additional questions at 
 
- [GitHub](https://github.com/AGithubuser)
-  or contact 
- Myname at myemail@email.com
+ eyra agudu  at eagudu19@gmail.com or check out my work on GitHub at 
+
+ [GitHub](https://github.com/eyraiscool)
  
