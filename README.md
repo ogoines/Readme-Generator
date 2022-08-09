@@ -14,7 +14,7 @@
  - [Questions](#Questions)
 
  ## Description
- With the Professional Readme Generator, users can quickly and easily create a high-quality Readme.  Users are prompted to answer questions on the command line.  Once completed, a Readme is created in Mark Down.
+ With the Professional Readme Generator, users can quickly and easily create a high-quality Readme.  Users are prompted to answer questions on the command line. Once completed, a Mark Down Readme is generated.
 
  ## Installation
  Use the following command to install dependencies:
@@ -24,7 +24,7 @@
  `
 
  ## Usage
- Node.Js and npm(normally comes with Node.js) are required
+ Node.js and npm(normally comes with Node.js) are required 
 
  ## License
  GPL 3.0
@@ -32,7 +32,7 @@
  This project is licensed by the GPL 3.0.
  
  ## Contributing
- Currently, there are no guidelines for project contributions
+ Currenty, there are no guidelines for contributions
 
  ## Tests
  
@@ -43,9 +43,8 @@
  `
 
  ## Demo Link
- `
- https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view
- `
+ 
+ [Demo] (https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view)
 
  ## Questions
 
@@ -53,5 +52,5 @@
 
  Jane Doe at jane@email.com or check out my work on GitHub at 
 
- [GitHub](https://github.com/janeGitHubuser)
+ [GitHub](https://github.com/JaneGitHubuser)
  

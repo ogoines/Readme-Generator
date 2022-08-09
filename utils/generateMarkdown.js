@@ -54,9 +54,8 @@ function generateMarkdown(data) {
  \`
 
  ## Demo Link
- \`
- https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view
- \`
+ 
+ [Demo] (https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view)
 
  ## Questions
 
