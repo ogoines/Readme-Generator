@@ -6,6 +6,8 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const writeFile= util.promisify(fs.writeFile);
 
+
+
 //array of questions for user input
 const questions = () => inquirer.prompt([
    {
@@ -62,8 +64,13 @@ const questions = () => inquirer.prompt([
 ]);
 
 
-// then console logs if input successful /creates markedown from user input questions 
-questions()
- .then((data) => writeFile('README.md', generateMarkdown(data)))
- .then(() => console.log('Successful html write'))
- .catch((err) => console.error(err));
+//initializes  prompt  console logs if successful /creates markedown from user input questions 
+ const init = () => {
+ console.log("Welcome to the README generator.\nPlease answer the following questions:");
+ questions()
+  .then((data) => writeFile('README.md', generateMarkdown(data)))
+  .then(() => console.log('Successful html write'))
+  .catch((err) => console.error(err));
+}
+init();
+ 
