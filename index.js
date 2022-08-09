@@ -50,11 +50,6 @@ const questions = () => inquirer.prompt([
    },
    {
     type: "input",
-    message: "What kind of License should your project have?",
-    name: "license"
-   },
-   {
-    type: "input",
     message: "What command should be run to install dependencies?",
     name: "install"
    },
