@@ -35,10 +35,6 @@ const questions = () => inquirer.prompt([
     name: "license",
     choices: ["Apache 2.0","BSD 3", "GPL 3.0","MIT","None"]
    },
-   {type: "input",
-   message: "Please write the guidelines for contributing to this project.",
-   name: "contribute"
-   },
    {
     type: "input",
     message: "Please write a short description of your project?",
@@ -58,6 +54,10 @@ const questions = () => inquirer.prompt([
     message: "What command should be used to run tests?",
     name: "testcommand"
    }, 
+   {type: "input",
+   message: "Please write the guidelines for contributing to this project.",
+   name: "contribute"
+   },
   
 ]);
 
