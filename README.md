@@ -2,7 +2,7 @@
  # Professional Readme Generator
 
   
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
  ## Table of Contents
  * [Project description](#Description)
@@ -14,7 +14,7 @@
  - [Questions](#Questions)
 
  ## Description
- With the Professional Readme Generator, users can quickly and easily create a high-quallity README.  Users are prompted to answer questions on the command line.  Once completed, a mark down Readme is generated.
+ With the Professional Readme Generator, users can quickly and easily create a high-quality RREADME.  Users are prompted to answer questions  on the command line.  Once completed, a Mark Down Readme is created.
 
  ## Installation
  Use the following command to install dependencies:
@@ -24,15 +24,15 @@
  `
 
  ## Usage
- Node.js and npm(normally comes with Node.js) are required
+ Node.js and npm(normally comes with Node.je) are required
 
  ## License
- MIT
+ GPL 3.0
 
- This project is licensed by the MIT.
+ This project is licensed by the GPL 3.0.
  
  ## Contributing
- Currently there are no guidelines for contributions
+ Currently, there are no guidelines for contributions
 
  ## Tests
  
@@ -41,12 +41,17 @@
  `
  n/a 
  `
- 
+
+ ## Demo Link
+ `
+ [Screencastify](https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view)
+ `
+
  ## Questions
 
  Contact me with additional questions at 
 
  Jane Doe at jane@email.com or check out my work on GitHub at 
 
- [GitHub](https://github.com/JaneGithub)
+ [GitHub](https://github.com/JaneGithubUser)
  
