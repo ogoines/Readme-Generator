@@ -55,7 +55,7 @@ function generateMarkdown(data) {
 
  ## Demo Link
  \`
- [Screencastify](https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view)
+ https://drive.google.com/file/d/1K9G4YXi_YTVSdqK8M2bsXsI4Vya49I86/view
  \`
 
  ## Questions
