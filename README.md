@@ -50,7 +50,7 @@
 
  Contact me with additional questions at 
 
- Jane Doe at jane@email.com or check out my work on GitHub at 
+ Jane Doe at orshamarie@gmail.com or check out my work on GitHub at 
 
  [GitHub](https://github.com/JaneGitHubuser)
  
